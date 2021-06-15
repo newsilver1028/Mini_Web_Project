@@ -14,20 +14,22 @@
         <button type="button" id="click" onclick="hex()">CLICK ME</button>
     </div>
     <script>
-        function hex() {
-            let code = "";
-            let possible = "ABCDEF0123456789";
+         function hex() {
+            let code = "";			// 랜덤으로 뽑은 코드를 누적할 변수
+            let possible = "ABCDEF0123456789";	// 랜덤 범위
 
             for (let i = 0; i < 6; i++) {
                 code += possible.charAt(Math.floor(Math.random() * possible.length));
-            }
-            let x = document.getElementById("body");
-            x.style.backgroundColor = "#" + code;
-            let hexCode = "HEX COLOR : #"+code;
-            let hexCode2 = document.getElementById("code2");
-            hexCode2.innerHTML = hexCode;
+            }	// possible 문자열 중 숫자와 문자 무작위로 뽑아 code 변수에 누적
 
-            return "#" + code;
+            let body = document.getElementById("body");
+            body.style.backgroundColor = "#" + code;
+            // body에 배경색 적용
+
+            let hexCode = "HEX COLOR : #" + code;
+            let printCode = document.getElementById("text");
+            printCode.innerHTML = hexCode;
+            // text에 code 표시
         }
         console.log(hex());
 
