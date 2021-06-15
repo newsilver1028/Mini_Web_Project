@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+</head>
+
+<body id="body">
+    <div id="text">
+        <h1 id="code2"></h1>
+        <button type="button" id="click" onclick="hex()">CLICK ME</button>
+    </div>
+    <script>
+        function hex() {
+            let code = "";
+            let possible = "ABCDEF0123456789";
+
+            for (let i = 0; i < 6; i++) {
+                code += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            let x = document.getElementById("body");
+            x.style.backgroundColor = "#" + code;
+            let hexCode = "HEX COLOR : #"+code;
+            let hexCode2 = document.getElementById("code2");
+            hexCode2.innerHTML = hexCode;
+
+            return "#" + code;
+        }
+        console.log(hex());
+
+
+
+    </script>
+
+    <style>
+        h1 {
+            font-size: 3em;
+            font-weight: 400;
+        }
+
+        #text {
+            text-align: center;
+            padding-top: 250px;
+
+        }
+
+        #click {
+            width: 150px;
+            height: 50px;
+            background-color: gray;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+        }
+    </style>
+
+</body>
+
+</html>
