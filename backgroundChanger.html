@@ -15,21 +15,21 @@
     </div>
     <script>
          function hex() {
-            let code = "";			// 랜덤으로 뽑은 코드를 누적할 변수
-            let possible = "ABCDEF0123456789";	// 랜덤 범위
+            let code = "";			                    // 랜덤으로 뽑은 코드를 누적할 변수
+            let possible = "ABCDEF0123456789";	        // 랜덤 범위
 
             for (let i = 0; i < 6; i++) {
-                code += possible.charAt(Math.floor(Math.random() * possible.length));
-            }	// possible 문자열 중 숫자와 문자 무작위로 뽑아 code 변수에 누적
+                code += possible.charAt(Math.floor(Math.random() * possible.length));       // possible 문자열 중 숫자와 문자 무작위로 뽑아 code 변수에 누적
+            }	
 
             let body = document.getElementById("body");
-            body.style.backgroundColor = "#" + code;
-            // body에 배경색 적용
+            body.style.backgroundColor = "#" + code;                                        // body에 배경색 적용
+            
 
             let hexCode = "HEX COLOR : #" + code;
             let printCode = document.getElementById("text");
-            printCode.innerHTML = hexCode;
-            // text에 code 표시
+            printCode.innerHTML = hexCode;                                                  // text에 code 표시
+          
         }
         console.log(hex());
 
