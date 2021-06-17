@@ -1,12 +1,45 @@
 body {
-  background-image: url("./images/bg.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Varela Round", sans-serif;
+    background-image: url("./images/bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Varela Round", sans-serif;
 }
 
 h1 {
-  font-family: "Pacifico", cursive;
-  text-align: center;
-  font-size: 72px;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    font-size: 72px;
+}
+
+#wrapper {
+    text-align: center;
+    display: flex;
+}
+#arrow {
+    width: 50px;
+    height: 50px;
+    padding-top: 350px;
+}
+
+.button-box {
+    text-align: center;
+}
+
+#btn {
+    width: 5px;
+    height: 10px;
+    border-radius: 100%;
+    border: none;
+    margin: 10px 10px;
+}
+#image {
+    width: 1000px;
+}
+
+#images-wrapper {
+    text-align: center;
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
 }
