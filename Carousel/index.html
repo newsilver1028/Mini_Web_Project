@@ -25,15 +25,28 @@
 
       <!-- Carousel Start -->
       <div id="wrapper">
-        
-        <img src="images/image-1.png" width="100%">
+        <img src="images/prev.png" id="arrow" class="prev">
+        <div id="images-wrapper">
+            <img src="images/image-1.png" width="70%" id="image">
+            <img src="images/image-2.png" width="70%" id="image">
+            <img src="images/image-3.png" width="70%" id="image">
+            <img src="images/image-4.png" width="70%" id="image">
+            <img src="images/image-5.png" width="70%" id="image">
+        </div>
+        <img src="images/next.png" id="arrow" class="next">
+    </div>
+    <div class="button-box">
+        <input type="button" id="btn">
+        <input type="button" id="btn">
+        <input type="button" id="btn">
+        <input type="button" id="btn">
+        <input type="button" id="btn">
 
-      </div>
+    </div>
       <!-- Carousel End -->
     </section>
 
     <script src="index.js">
-      someImageElement.src = "/images/image-1.png";
     </script>
   </body>
 </html>
