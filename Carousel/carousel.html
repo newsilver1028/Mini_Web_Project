@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Carousel Project</title>
+</head>
+
+<body>
+    <h1>Carousel</h1>
+    <!-- Carousel Start -->
+    <div id="wrapper">
+        <!-- 이전 버튼 -->
+        <a class="prev" onclick="prevSlide(1)">
+            <img src="images/prev.png" id="arrow"></a>
+
+        <!-- 이미지 리스트 -->
+        <div class="images-wrapper"><img src="images/image-1.png" id="image"> </div>
+        <div class="images-wrapper">
+            <img src="images/image-2.png" id="image">
+        </div>
+        <div class="images-wrapper">
+            <img src="images/image-3.png" id="image">
+        </div>
+        <div class="images-wrapper">
+            <img src="images/image-4.png" id="image">
+        </div>
+        <div class="images-wrapper">
+            <img src="images/image-5.png" id="image">
+        </div>
+
+        <!-- 다음 버튼 -->
+        <a class="next" onclick="nextSlide(1)">
+            <img src="images/next.png" id="arrow"></a>
+    </div>
+
+    <!-- 인덱스를 이동할 수 있는 dot -->
+    <div class="dots-wrapper">
+        <input type="button" class="dot" onclick="currentSlide(1)">
+        <input type="button" class="dot" onclick="currentSlide(2)">
+        <input type="button" class="dot" onclick="currentSlide(3)">
+        <input type="button" class="dot" onclick="currentSlide(4)">
+        <input type="button" class="dot" onclick="currentSlide(5)">
+    </div>
+
+    <!-- Carousel End -->
+    </section>
+
+    <script src="index.js">
+    </script>
+</body>
+
+</html>
