@@ -1,6 +1,7 @@
 body {
     background-size: cover;
     font-family: "Varela Round", sans-serif;
+    background-color: skyblue;
 }
 
 h1 {
@@ -15,4 +16,8 @@ h1 {
 
 #wrapper {
     text-align: center;
+}
+
+#calendar {
+    margin: 10px auto;
 }
