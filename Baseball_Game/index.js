@@ -41,7 +41,7 @@ function handleStartButtonClick(){
       count++;
       const number = $inputNumber.value;
       if(number>999 || number<100){
-        alert("세자리 숫자를 입력해주십시오.");
+        alert("세자리 숫자를 입력해주세요.");
         return;
       }
     const numArray = String(number).split("");

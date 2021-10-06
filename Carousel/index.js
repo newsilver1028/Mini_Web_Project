@@ -4,31 +4,29 @@ const $prev = document.querySelector(".prev");
 const $next = document.querySelector(".next");
 const CLASS_NAME_HIDDEN = "hidden";
 
-console.log(imagesList);
+let index = 1;
 
-for(let j = 0; j<imagesList.length; j++){
+function currentSlide() {
+  showSlides(index);
+}
+
+for(let j = 1; j<imagesList.length+1; j++){
   const dots = document.createElement("div");
   $dotsWrapper.append(dots);
   dots.className = "dots";
-  dots.addEventListener("click",function (n){
-    showSlides((index = n));
+  dots.addEventListener("click",function (){
+    showSlides(index = j);
   })
 }
 const dotsList = document.querySelectorAll(".dots");
-console.log(dotsList);
-let index = 1;
 showSlides(index);
 
-$prev.addEventListener("click", function (n) {
-  showSlides((index -= n));
+$prev.addEventListener("click", function () {
+  showSlides((index -= 1));
 });
-$next.addEventListener("click",function (n) {
-  showSlides((index += n));
+$next.addEventListener("click",function () {
+  showSlides((index += 1));
 });
-
-function currentSlide(n) {
-  showSlides((index = n));
-}
 
 function showSlides(n) {
   if (n > imagesList.length) {
@@ -43,10 +41,12 @@ function showSlides(n) {
   }
   
   for (i = 0; i < dotsList.length; i++) {
-    dotsList[i].className.replace("active", "");
+    dotsList[i].className = "dots";
   }
-
   imagesList[index - 1].className = "image";
   dotsList[index - 1].className += "active";
 }
 
+function showPrevImage(n){
+
+}
