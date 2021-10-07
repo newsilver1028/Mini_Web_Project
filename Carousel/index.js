@@ -46,7 +46,3 @@ function showSlides(n) {
   imagesList[index - 1].className = "image";
   dotsList[index - 1].className += "active";
 }
-
-function showPrevImage(n){
-
-}
