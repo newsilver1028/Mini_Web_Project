@@ -1,26 +1,58 @@
-var date = new Date();
-var week = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+const $calendarTable = document.querySelector("#calendar-table");
+let today = new Date();
+const DATE = new Date();
+const WEEK = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
+const $day = document.querySelector("#day");
+const $date = document.querySelector("#date");
+const MONTH = new Array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC");
+const $month = document.querySelector("#month");
+const tbody = document.createElement("tbody");
+$calendarTable.append(tbody);
 
-var day = document.getElementById("day");
-day.innerHTML = week[date.getDay()];
+const $prevButton = document.querySelector("#prev-button");
+$prevButton.addEventListener("click",handlePrevMonthClick);
+const $nextButton = document.querySelector("#next-button");
+$nextButton.addEventListener("click",handleNextMonthClick);
 
-var todate = document.getElementById("date");
-todate.innerHTML = date.getDate();
-
-var mon = new Array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC");
-var month = document.getElementById("month");
-month.innerHTML = mon[date.getMonth()] + " " + date.getFullYear();
+createCal();
 
 function createCal() {
-    var firstDate = new Date(date.getFullYear, date.getMonth, 1);
-    var lastDate = new Date(date.getFullYear, today.getMonth() + 1, 0);
+  $day.textContent = WEEK[today.getDay()];
+  $date.textContent = today.getDate();
+  $month.textContent = `${MONTH[today.getMonth()]} ${today.getFullYear()}`;
 
-    var tb = document.getElementById("calendar");
-    var tb2 = document.getElementById("tbday");
+  const firstDate = new Date(today.getFullYear(),today.getMonth(),1);
+  const lastDate = new Date(today.getFullYear(),today.getMonth()+1,0);
 
-    while (tb.rows.length > 2) {
-        tb.deleteRow(tb.rows.length - 1);
+  while(tbody.rows.length > 0){
+    tbody.deleteRow(tbody.rows.length-1);
+  }
+  let row = tbody.insertRow();
+  let cell = "";
+  let count = 0;
+
+  for(let i = 0; i<firstDate.getDay();i++){
+    console.log(i);
+    cell = row.insertCell();
+    count++;
+  }
+  for(let j = 1;j<=lastDate.getDate();j++){
+    if(count % 7 === 0){
+      row = tbody.insertRow();
     }
-    var row = null;
-    row = tb.insertRow();
+    cell = row.insertCell();
+    cell.textContent = j;
+    count++;
+  }
+
+}
+
+function handleNextMonthClick() {
+  today = new Date(today.getFullYear(),today.getMonth() + 1,today.getDate());
+  createCal();
+}
+
+function handlePrevMonthClick(){
+  today = new Date(today.getFullYear(),today.getMonth() - 1,today.getDate());
+  createCal();
 }

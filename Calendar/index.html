@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="icon" href="/images/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Calendar Project</title>
@@ -14,30 +13,35 @@
 <body>
   <section>
     <h1>Calendar</h1>
-
     <!-- 달력 Start -->
     <div id="wrapper">
-      <div id = "today">
         <h2 id="day"></h2>
         <h2 id="date"></h2>
-        <h2 id="month"></h2>
+        <h3 id="month"></h3>
       </div>
-      <div id="cal">
-        <h3 id = "week"></h3>
-        <table id = "calendar">
+      <div id="calendar-wrapper">
+        <div id="prev" class="button-wrapper">
+          <button type="button" id="prev-button"><img src="images/left.jpeg" class="arrow"></button>
+        </div>
+        <div id="table-wrapper">
+        <h3 id="week"></h3>
+        <table id="calendar-table">
+          <thead>
           <tr>
-            <td>MON</td>
-            <td>TUE</td>
-            <td>WED</td>
-            <td>THU</td>
-            <td>FRI</td>
-            <td>SAT</td>
-            <td>SUN</td>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+            <th>SUN</th>
           </tr>
-          <div id = "tbday"></div>
+          </thead>
         </table>
+        </div>
+        <div id="next" class="button-wrapper">
+          <button type="button" id="next-button"><img src="images/right.png" class="arrow"></button></div>
       </div>
-    </div>
     <!-- 달력 End -->
   </section>
 
