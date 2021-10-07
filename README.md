@@ -70,11 +70,10 @@
 
 #### ✏️ 입력값이 세자리 숫자가 아닌 경우 경고창 띄우기
 #### ✏️ 사용자가 10회 이상 틀릴 시 재시작 버튼
-![](https://images.velog.io/images/newsilver1028/post/532f6591-4106-4cf4-99e5-4a314239952a/%5Bbaseball3%5D.gif)
+![baseball](https://user-images.githubusercontent.com/79626675/136422849-c228b82a-8dce-4fa4-9f9d-6fbf44daceb0.gif)  
 
 #### 사용자가 10회 이내 정답 입력 시 정답 화면
-![](https://images.velog.io/images/newsilver1028/post/5385d23f-8077-4fce-ac35-e3aaa83897e7/%5Bbaseball2%5D.gif)
-
+![baseball5](https://user-images.githubusercontent.com/79626675/136424388-a7754580-8815-464c-a864-6ce9bcb42f1c.gif)
 
 
 ## 4. Calendar 
