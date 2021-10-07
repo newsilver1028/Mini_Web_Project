@@ -19,8 +19,8 @@
 - 버튼 클릭 시, 랜덤한 Hex color code를 생성하여 페이지의 배경 색깔과 Hex color code 텍스트 수정하기
 
 ### 출력화면
+![background_changer](https://user-images.githubusercontent.com/79626675/136424791-bc0087e0-62c4-4eaa-a5ff-ed044e718822.gif)
 
-<img width="961" alt="HEX COLOR #70C6E1" src="https://user-images.githubusercontent.com/79626675/122031166-69ccf780-ce09-11eb-9c76-14f153c6d7af.png">
 
 ## 2. Carousel
 ### 요구사항
@@ -45,7 +45,9 @@
 - 이미지 하단의 Dot를 누를 경우, 해당 순번의 이미지 보여주기
 
 ### 출력화면
-![9C5EA871-C34C-4880-879A-198050ACA872_1_105_c](https://user-images.githubusercontent.com/79626675/135761819-de51502a-fda9-400b-ab53-367efcd684e3.jpeg)
+![carousel](https://user-images.githubusercontent.com/79626675/136425115-e9d2d52f-bf35-4584-b5c1-7b2022e921ce.gif)
+
+> 이미지 출처 : https://unsplash.com/
 
 ## 3. Baseball Game
 #### 참고사항
@@ -75,6 +77,7 @@
 #### 사용자가 10회 이내 정답 입력 시 정답 화면
 ![baseball5](https://user-images.githubusercontent.com/79626675/136424388-a7754580-8815-464c-a864-6ce9bcb42f1c.gif)
 
+> 이미지 출처 : https://giphy.com/
 
 ## 4. Calendar 
 
